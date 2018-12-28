@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL shortener</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      {% csrf_token %}
+      <label for="url">URL: </label>
+      <input id="url" type="text" name="url" maxlength="100">
+      <input type="submit">
+      <h1>{{error_scheme}}</h1>
+    </form>
+    <a href = {{short_url}}>{{short_url}}</a>
+    <a href = {{count_url}}>{{count_url}}</a>
+
+  </body>
+</html>
